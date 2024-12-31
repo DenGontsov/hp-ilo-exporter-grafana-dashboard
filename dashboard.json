@@ -1,0 +1,1260 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "HP iLO Monitoring dashboard from https://github.com/DenGontsov/hp-ilo-exporter-grafana-dashboard",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 48,
+  "links": [],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 21,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"display: inline-block;padding: 20px;background-color: white;border: 1px solid #ccc;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\">\r\n<img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ5Ljdt\r\nbSIgaGVpZ2h0PSI2Mi41Mm1tIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MzAuNSAyMjEu\r\nNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpjYz0iaHR0cDovL2Ny\r\nZWF0aXZlY29tbW9ucy5vcmcvbnMjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1l\r\nbnRzLzEuMS8iIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3lu\r\ndGF4LW5zIyI+Cjx0aXRsZT5IZXdsZXR0IFBhY2thcmQgRW50ZXJwcmlzZSBsb2dvPC90aXRsZT4K\r\nIDxtZXRhZGF0YT4KICA8cmRmOlJERj4KICAgPGNjOldvcmsgcmRmOmFib3V0PSIiPgogICAgPGRj\r\nOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICA8ZGM6dHlwZSByZGY6cmVzb3Vy\r\nY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIi8+CiAgICA8ZGM6dGl0\r\nbGUvPgogICA8L2NjOldvcms+CiAgPC9yZGY6UkRGPgogPC9tZXRhZGF0YT4KIDxnIHRyYW5zZm9y\r\nbT0ibWF0cml4KC4zODY0IDAgMCAuMzg2NCAxNjguMSAtMTEwLjIpIj4KICA8ZyB0cmFuc2Zvcm09\r\nIm1hdHJpeCg3LjQ0NiAwIDAgNy40NDYgMjgwNSAtMTgzOSkiPgogICA8cGF0aCBkPSJtLTM3NS45\r\nIDI5OS41aC01NS4ydi0xMC4yM2g1NS4yem0zLjk0NC0xNC4xOGgtNjMuMDl2MTguMTJoNjMuMDl6\r\nIiBzdHlsZT0iZmlsbDojMDBiMTg4Ii8+CiAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEuMjUgMCAw\r\nIC0xLjI1IC00MzEuMSAzMzMuNCkiPgogICAgPHBhdGggZD0ibTAgMGgtMy4xNTV2MTQuNWgzLjE1\r\nNXYtNS43MjhoNS42Mzd2NS43MjhoMy4xNTV2LTE0LjVoLTMuMTU1djYuMDA3aC01LjYzN3YtNi4w\r\nMDciIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJp\r\neCgxLjI1IDAgMCAtMS4yNSAtNDE0LjEgMzI1LjQpIj4KICAgIDxwYXRoIGQ9Im0wIDBoMy43NThj\r\nLTAuMDcgMS4wNjYtMC41MSAxLjgwOS0xLjc0IDEuODA5LTAuOTI4IDAtMS43NC0wLjM5NS0yLjAx\r\nOC0xLjgwOXptMi4zODktNi41ODdjLTMuMjAxIDAtNS4zODEgMi4wMTgtNS4zODEgNS4zMzMgMCAz\r\nLjIyNSAyLjEzNCA1LjQ1MSA0Ljk2NCA1LjQ1MSAzLjA4NSAwIDQuNjE2LTIuMDY0IDQuNjE2LTUu\r\nMTQ5di0xLjE2aC02LjU4OGMwLjM3Mi0xLjU5OSAxLjYyNC0yLjAxNiAyLjg3Ny0yLjAxNiAxLjA5\r\nIDAgMS44NzggMC4yMzEgMi44NTIgMC44MzVoMC4xMTd2LTIuMzg5Yy0wLjgzNS0wLjYwNC0yLjAx\r\nOS0wLjkwNS0zLjQ1Ny0wLjkwNSIgc3R5bGU9ImZpbGw6IzA0MDQwNCIvPgogICA8L2c+CiAgIDxn\r\nIHRyYW5zZm9ybT0ibWF0cml4KDEuMjUgMCAwIC0xLjI1IC0zOTUuNiAzMjUuOCkiPgogICAgPHBh\r\ndGggZD0ibTAgMC0xLjYyNC02LjA3NmgtMi43NmwtMy4xNTUgMTAuMnYwLjExNmgzLjAxNmwxLjcx\r\nNi02LjEgMS42MjQgNi4xaDIuNDU5bDEuNjQ3LTYuMSAxLjc0IDYuMWgyLjl2LTAuMTE2bC0zLjE1\r\nNS0xMC4yaC0yLjc2MWwtMS42NDcgNi4wNzYiIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9n\r\nPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtMzc5LjggMzMzLjYpIj4K\r\nICAgIDxwYXRoIGQ9Im0wIDBjLTIuNTA1IDAtMy41MjYgMC45OTctMy41MjYgMy4zMzl2MTEuMzlo\r\nMy4wNjJ2LTExLjE4YzAtMC43MTkgMC4yNzgtMC45NzQgMC44ODEtMC45NzQgMC4yMDkgMCAwLjUx\r\nMSAwLjA2OSAwLjY5NiAwLjEzOWgwLjA0N3YtMi41MjhjLTAuMjU1LTAuMDkyLTAuNjk2LTAuMTg1\r\nLTEuMTYtMC4xODUiIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zv\r\ncm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtMzczLjUgMzI1LjQpIj4KICAgIDxwYXRoIGQ9Im0w\r\nIDBoMy43NThjLTAuMDcgMS4wNjYtMC41MSAxLjgwOS0xLjc0IDEuODA5LTAuOTI3IDAtMS43NC0w\r\nLjM5NS0yLjAxOC0xLjgwOXptMi4zODktNi41ODdjLTMuMjAxIDAtNS4zODEgMi4wMTgtNS4zODEg\r\nNS4zMzMgMCAzLjIyNSAyLjEzNCA1LjQ1MSA0Ljk2NCA1LjQ1MSAzLjA4NSAwIDQuNjE2LTIuMDY0\r\nIDQuNjE2LTUuMTQ5di0xLjE2aC02LjU4OGMwLjM3MS0xLjU5OSAxLjYyNC0yLjAxNiAyLjg3Ni0y\r\nLjAxNiAxLjA5MSAwIDEuODc5IDAuMjMxIDIuODU0IDAuODM1aDAuMTE2di0yLjM4OWMtMC44MzUt\r\nMC42MDQtMi4wMTgtMC45MDUtMy40NTctMC45MDUiIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAg\r\nPC9nPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtMzQ5LjUgMzIwLjUp\r\nIj4KICAgIDxwYXRoIGQ9Im0wIDBoMi4yNzN2LTIuNDU4aC0yLjI3M3YtNC4xOThjMC0wLjkwNSAw\r\nLjM0OC0xLjMyMyAxLjI3Ni0xLjMyMyAwLjI1NSAwIDAuNTggMC4wMjQgMC45MjggMC4xNGgwLjA2\r\nOXYtMi40MTJjLTAuMzk0LTAuMTQtMC45OTctMC4zMDEtMS44NzgtMC4zMDEtMi40ODMgMC0zLjQ1\r\nNyAxLjEzNi0zLjQ1NyAzLjc1N3Y0LjMzN2gtMy45MnYtNC4xOThjMC0wLjkwNSAwLjM0OC0xLjMy\r\nMyAxLjI3NS0xLjMyMyAwLjI1NiAwIDAuNTgxIDAuMDI0IDAuOTI5IDAuMTRoMC4wNjl2LTIuNDEy\r\nYy0wLjM5NC0wLjE0LTAuOTk4LTAuMzAxLTEuODc4LTAuMzAxLTIuNDgzIDAtMy40NTcgMS4xMzYt\r\nMy40NTcgMy43NTd2NC4zMzdoLTEuNTc4djIuNDU4aDEuNTc4djIuODI5aDMuMDYydi0yLjgyOWgz\r\nLjkydjIuODI5aDMuMDYydi0yLjgyOSIgc3R5bGU9ImZpbGw6IzA0MDQwNCIvPgogICA8L2c+CiAg\r\nIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEuMjUgMCAwIC0xLjI1IC0zMzMuOCAzMjQuMSkiPgogICAg\r\nPHBhdGggZD0ibTAgMGMxLjYwMiAwIDIuMzY2IDAuOTA0IDIuMzY2IDIuMjAzIDAgMS4zNDYtMC43\r\nNjQgMi4yNS0yLjM2NiAyLjI1aC0xLjk5NXYtNC40NTN6bTUuNTY4IDIuMjAzYzAtMy4xNTUtMi4x\r\nMTEtNC44Ny01LjMxMy00Ljg3aC0yLjI1di00LjcwOGgtMy4xNTN2MTQuNWg1LjQwM2MzLjIwMiAw\r\nIDUuMzEzLTEuNzE2IDUuMzEzLTQuOTE3IiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4K\r\nICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgLTMxOC40IDMyOS4zKSI+CiAg\r\nICA8cGF0aCBkPSJtMCAwdjAuODgxYy0wLjQ2NCAwLjI1NC0xLjA2NiAwLjM0Ny0xLjY5MyAwLjM0\r\nNy0wLjk5NyAwLTEuNi0wLjM3LTEuNi0xLjIwNSAwLTAuODU5IDAuNjAzLTEuMjMgMS41MDctMS4y\r\nMyAwLjg1OCAwIDEuNTA4IDAuNDQxIDEuNzg2IDEuMjA3em0wLjA5My0yLjIyN2MtMC42NzMtMC44\r\nMTItMS42NjktMS4yMDYtMi43MzgtMS4yMDYtMi4wMTcgMC0zLjY2NSAxLjIyOC0zLjY2NSAzLjQx\r\nIDAgMi4wMTcgMS42NDggMy4zNjIgNC4wMTMgMy4zNjIgMC43NDIgMCAxLjUwOS0wLjExNiAyLjI5\r\nNy0wLjM0N3YwLjE4NGMwIDEuMTE0LTAuNjI2IDEuNi0yLjI3MiAxLjYtMS4wNDUgMC0yLjA0Mi0w\r\nLjMtMi45MDEtMC43ODhoLTAuMTE1djIuNDU5YzAuNzg4IDAuNDYzIDIuMTgxIDAuODU4IDMuNTQ4\r\nIDAuODU4IDMuMTA5IDAgNC44MDItMS40ODQgNC44MDItNC4wODJ2LTYuNDdoLTIuOTY5djEuMDIi\r\nIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgx\r\nLjI1IDAgMCAtMS4yNSAtMzEyLjcgMzI2LjkpIj4KICAgIDxwYXRoIGQ9Im0wIDBjMCAzLjMxNyAy\r\nLjM0NCA1LjQwNCA1LjQwNiA1LjQwNCAxLjA5IDAgMi4xMS0wLjIzMiAyLjg3Ni0wLjc4OHYtMi42\r\nMjFoLTAuMTE3Yy0wLjY3MyAwLjUxLTEuNDYxIDAuODEyLTIuMzY1IDAuODEyLTEuNTMxIDAtMi42\r\nOTEtMS4wNDUtMi42OTEtMi44MDdzMS4xNi0yLjc4MyAyLjY5MS0yLjc4M2MwLjkwNCAwIDEuNjky\r\nIDAuMzAyIDIuMzY1IDAuODEzaDAuMTE3di0yLjYyMWMtMC43NjYtMC41NTctMS43ODYtMC43ODkt\r\nMi44NzYtMC43ODktMy4wNjIgMC01LjQwNiAyLjA2My01LjQwNiA1LjM4IiBzdHlsZT0iZmlsbDoj\r\nMDQwNDA0Ii8+CiAgIDwvZz4KICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUg\r\nLTI5Ni4xIDMyNy41KSI+CiAgICA8cGF0aCBkPSJtMCAwdi00LjY4NGgtMy4wNjF2MTQuNWgzLjA2\r\nMXYtOC4yNTZsMy4wODYgNC4wODJoMy40Nzl2LTAuMTE2bC0zLjcxMS00LjY4NSAzLjcxMS01LjQw\r\nNHYtMC4xMTZoLTMuNTAzbC0zLjA2MiA0LjY4NCIgc3R5bGU9ImZpbGw6IzA0MDQwNCIvPgogICA8\r\nL2c+CiAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEuMjUgMCAwIC0xLjI1IC0yNzkuMyAzMjkuMyki\r\nPgogICAgPHBhdGggZD0ibTAgMHYwLjg4MWMtMC40NjMgMC4yNTQtMS4wNjcgMC4zNDctMS42OTMg\r\nMC4zNDctMC45OTcgMC0xLjYtMC4zNy0xLjYtMS4yMDUgMC0wLjg1OSAwLjYwMy0xLjIzIDEuNTA2\r\nLTEuMjMgMC44NiAwIDEuNTA5IDAuNDQxIDEuNzg3IDEuMjA3em0wLjA5My0yLjIyN2MtMC42NzMt\r\nMC44MTItMS42NzEtMS4yMDYtMi43MzctMS4yMDYtMi4wMTkgMC0zLjY2NSAxLjIyOC0zLjY2NSAz\r\nLjQxIDAgMi4wMTcgMS42NDYgMy4zNjIgNC4wMTQgMy4zNjIgMC43NDIgMCAxLjUwNi0wLjExNiAy\r\nLjI5NS0wLjM0N3YwLjE4NGMwIDEuMTE0LTAuNjI2IDEuNi0yLjI3MyAxLjYtMS4wNDMgMC0yLjA0\r\nMi0wLjMtMi45LTAuNzg4aC0wLjExNnYyLjQ1OWMwLjc4OSAwLjQ2MyAyLjE4MSAwLjg1OCAzLjU0\r\nOSAwLjg1OCAzLjExIDAgNC44MDMtMS40ODQgNC44MDMtNC4wODJ2LTYuNDdoLTIuOTd2MS4wMiIg\r\nc3R5bGU9ImZpbGw6IzA0MDQwNCIvPgogICA8L2c+CiAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEu\r\nMjUgMCAwIC0xLjI1IC0yNjkgMzIyLjUpIj4KICAgIDxwYXRoIGQ9Im0wIDBjMC41NTYgMS4xMzcg\r\nMS4zNjkgMS43ODYgMi41MDYgMS43ODYgMC40MTcgMCAwLjgzNC0wLjA5MyAwLjk5NS0wLjE4NnYt\r\nMi45MjJoLTAuMTE1Yy0wLjM0OCAwLjE0LTAuNzY1IDAuMjMyLTEuMzQ1IDAuMjMyLTAuOTUxIDAt\r\nMS42OTMtMC41NTctMS45NDktMS42MjN2LTUuOTM4aC0zLjA2MXYxMC4zMmgyLjk2OXYtMS42NyIg\r\nc3R5bGU9ImZpbGw6IzA0MDQwNCIvPgogICA8L2c+CiAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEu\r\nMjUgMCAwIC0xLjI1IC0yNTQuNSAzMjkpIj4KICAgIDxwYXRoIGQ9Im0wIDB2My4zMTdjLTAuNTEg\r\nMC43NDItMS4xODIgMS4wNjYtMS45NDkgMS4wNjYtMS4zNDQgMC0yLjI0OS0wLjk3NS0yLjI0OS0y\r\nLjczN3MwLjkwNS0yLjcxMyAyLjI0OS0yLjcxM2MwLjc2NyAwIDEuNDM5IDAuMzI1IDEuOTQ5IDEu\r\nMDY3em0wLjA5Mi0yLjQzNmMtMC42NDktMC44MzUtMS42Ny0xLjI5OC0zLjA2MS0xLjI5OC0yLjY0\r\nNSAwLTQuMzM4IDIuNDExLTQuMzM4IDUuMzhzMS42OTMgNS40MDQgNC4zMzggNS40MDRjMS4zNDUg\r\nMCAyLjMxOS0wLjQxOCAyLjk2OS0xLjE4M3Y1LjEyNWgzLjA2MnYtMTQuNDloLTIuOTd2MS4wNjYi\r\nIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgx\r\nLjI1IDAgMCAtMS4yNSAtNDM1IDMzOS4zKSI+CiAgICA8cGF0aCBkPSJtMCAwaDguOTU0di0xLjc2\r\nMmgtNi45MzZ2LTQuNDI5aDYuMjg2di0xLjcxN2gtNi4yODZ2LTQuODI0aDYuOTM2di0xLjc2Mmgt\r\nOC45NTR2MTQuNDkiIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zv\r\ncm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtNDE0LjYgMzQ0LjQpIj4KICAgIDxwYXRoIGQ9Im0w\r\nIDBjMi4yOTYgMCAzLjU3Mi0xLjUwOCAzLjU3Mi0zLjk4OHYtNi40MjVoLTEuOTI1djYuMzc4YzAg\r\nMS4zMjItMC42NzMgMi4yNzMtMi4xMzQgMi4yNzMtMS4yMDYgMC0yLjIyNy0wLjc2Ni0yLjU3NS0x\r\nLjg1NXYtNi43OTZoLTEuOTI1djEwLjJoMS45MjV2LTEuNDg0YzAuNjAzIDAuOTUxIDEuNjI0IDEu\r\nNjkzIDMuMDYyIDEuNjkzIiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4KICAgPGcgdHJh\r\nbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgLTQwMy43IDM0NC42KSI+CiAgICA8cGF0aCBk\r\nPSJtMCAwaDIuNjIxdi0xLjY0N2gtMi42MjF2LTUuNDk2YzAtMS4xNTkgMC42MDMtMS41NTQgMS42\r\nOTMtMS41NTQgMC4zMDEgMCAwLjYyNiAwLjA0NiAwLjg1OCAwLjEzOWgwLjA3di0xLjY0NmMtMC4y\r\nNzgtMC4xMTYtMC42NzMtMC4yMDktMS4yMDYtMC4yMDktMi4zOSAwLTMuMzQgMS4wOTEtMy4zNCAz\r\nLjA4NHY1LjY4MmgtMS43NjN2MS42NDdoMS43NjN2Mi43MTJoMS45MjV2LTIuNzEyIiBzdHlsZT0i\r\nZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4KICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAg\r\nLTEuMjUgLTM5Ni40IDM0OS44KSI+CiAgICA8cGF0aCBkPSJtMCAwaDUuMDhjLTAuMDY5IDEuNTA3\r\nLTAuODEyIDIuNjY2LTIuMzg5IDIuNjY2LTEuNDYxIDAtMi40MTMtMS4wOS0yLjY5MS0yLjY2Nnpt\r\nMy4wMzktNi4zMDljLTIuOTkzIDAtNS4wMzQgMS45OTUtNS4wMzQgNS4xOTUgMCAzLjIwMSAxLjkw\r\nMiA1LjQyNyA0LjY2MyA1LjQyNyAyLjgwNyAwIDQuMjY4LTIuMDE4IDQuMjY4LTUuMDA5di0wLjg4\r\nMmgtNy4wMDZjMC4yMDktMi4wNjQgMS41MzItMy4wNjEgMy4zNjQtMy4wNjEgMS4xMzcgMCAxLjk0\r\nOCAwLjI1NSAyLjg1MyAwLjkyOGgwLjA3di0xLjY5NGMtMC44MzUtMC42NDktMS45MjYtMC45MDQt\r\nMy4xNzgtMC45MDQiIHN0eWxlPSJmaWxsOiMwNDA0MDQiLz4KICAgPC9nPgogICA8ZyB0cmFuc2Zv\r\ncm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtMzgyLjQgMzQ2LjYpIj4KICAgIDxwYXRoIGQ9Im0w\r\nIDBjMC40NDEgMS4wOSAxLjQxNiAxLjczOSAyLjUyOCAxLjczOSAwLjQ0MiAwIDAuODM2LTAuMDY5\r\nIDAuOTk4LTAuMTYydi0xLjkwMWgtMC4wNjljLTAuMjc5IDAuMTM4LTAuNzQzIDAuMjA4LTEuMjA3\r\nIDAuMjA4LTEuMDQzIDAtMS45MjUtMC42OTUtMi4yNS0xLjg1NXYtNi42NTZoLTEuOTI1djEwLjJo\r\nMS45MjV2LTEuNTc3IiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4KICAgPGcgdHJhbnNm\r\nb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgLTM3MC4zIDM1NS41KSI+CiAgICA8cGF0aCBkPSJt\r\nMCAwYzEuOTAyIDAgMy4wMTYgMS41MDcgMy4wMTYgMy41NzIgMCAyLjA0LTEuMTE0IDMuNTctMy4w\r\nMTYgMy41Ny0xLjA0NCAwLTIuMDE4LTAuNjI2LTIuNTI4LTEuNjIydi0zLjkyMWMwLjUxLTAuOTk2\r\nIDEuNDg0LTEuNTk5IDIuNTI4LTEuNTk5em0wLjMyNSA4Ljg4MmMzLjAzOCAwIDQuNjYyLTIuNDgy\r\nIDQuNjYyLTUuMzEgMC0yLjgzMS0xLjYyNC01LjMxMi00LjY2Mi01LjMxMi0xLjI1MyAwLTIuMzIg\r\nMC42NDktMi44NTMgMS4zNDZ2LTUuMDU3aC0xLjkyNnYxNC4xMmgxLjkyNnYtMS4xNTljMC41MzMg\r\nMC43MTkgMS42IDEuMzY4IDIuODUzIDEuMzY4IiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwv\r\nZz4KICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgLTM1OC44IDM0Ni42KSI+\r\nCiAgICA8cGF0aCBkPSJtMCAwYzAuNDQgMS4wOSAxLjQxNSAxLjczOSAyLjUyOCAxLjczOSAwLjQ0\r\nMSAwIDAuODM1LTAuMDY5IDAuOTk3LTAuMTYydi0xLjkwMWgtMC4wNjljLTAuMjc4IDAuMTM4LTAu\r\nNzQyIDAuMjA4LTEuMjA2IDAuMjA4LTEuMDQ0IDAtMS45MjUtMC42OTUtMi4yNS0xLjg1NXYtNi42\r\nNTZoLTEuOTI1djEwLjJoMS45MjV2LTEuNTc3IiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwv\r\nZz4KICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMS4yNSAwIDAgLTEuMjUgLTM1MC45IDMzOS41KSI+\r\nCiAgICA8cGF0aCBkPSJtMCAwYzAuNjczIDAgMS4yMjktMC41MzMgMS4yMjktMS4yMDZzLTAuNTU2\r\nLTEuMjA2LTEuMjI5LTEuMjA2Yy0wLjY0OSAwLTEuMjMgMC41MzMtMS4yMyAxLjIwNnMwLjU4MSAx\r\nLjIwNiAxLjIzIDEuMjA2IiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4KICAgPHBhdGgg\r\nZD0ibS0zNTIuMSAzNTcuNGgyLjQwOHYtMTIuNzZoLTIuNDA4eiIgc3R5bGU9ImZpbGw6IzA0MDQw\r\nNCIvPgogICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLjI1IDAgMCAtMS4yNSAtMzQxLjEgMzQ5Ljkp\r\nIj4KICAgIDxwYXRoIGQ9Im0wIDBjMS40NjEtMC40NjMgMy4wODQtMS4wNjYgMy4wODQtMy4wMTQg\r\nMC0yLjA4OC0xLjcxNi0zLjE1NS0zLjkxOS0zLjE1NS0xLjM0NiAwLTIuNjkxIDAuMzI1LTMuNDU3\r\nIDAuOTI4djEuODMyaDAuMDkzYzAuODU5LTAuNzg4IDIuMTM0LTEuMTM2IDMuMzQtMS4xMzYgMS4w\r\nOSAwIDIuMDY1IDAuNDE4IDIuMDY1IDEuMjk5IDAgMC45MDQtMC44MTEgMS4xMTMtMi40MTMgMS42\r\nNDYtMS40MzggMC40NjQtMy4wMzggMC45OTgtMy4wMzggMi45MjIgMCAxLjk3MiAxLjYyMyAzLjEz\r\nMSAzLjY4OCAzLjEzMSAxLjIwNiAwIDIuMjczLTAuMjU1IDMuMTMxLTAuODM1di0xLjg1NmgtMC4w\r\nNjljLTAuODM0IDAuNjczLTEuODEgMS4wNjgtMy4wMTYgMS4wNjhzLTEuODc5LTAuNTM0LTEuODc5\r\nLTEuMjUzYzAtMC44MTIgMC43NDItMS4wNDMgMi4zOS0xLjU3NyIgc3R5bGU9ImZpbGw6IzA0MDQw\r\nNCIvPgogICA8L2c+CiAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEuMjUgMCAwIC0xLjI1IC0zMzIu\r\nNyAzNDkuOCkiPgogICAgPHBhdGggZD0ibTAgMGg1LjA3OWMtMC4wNjkgMS41MDctMC44MTEgMi42\r\nNjYtMi4zODkgMi42NjYtMS40NjEgMC0yLjQxMi0xLjA5LTIuNjktMi42NjZ6bTMuMDM4LTYuMzA5\r\nYy0yLjk5MiAwLTUuMDMzIDEuOTk1LTUuMDMzIDUuMTk1IDAgMy4yMDEgMS45MDIgNS40MjcgNC42\r\nNjIgNS40MjcgMi44MDggMCA0LjI2OC0yLjAxOCA0LjI2OC01LjAwOXYtMC44ODJoLTcuMDA1YzAu\r\nMjA5LTIuMDY0IDEuNTMxLTMuMDYxIDMuMzYzLTMuMDYxIDEuMTM4IDAgMS45NDkgMC4yNTUgMi44\r\nNTMgMC45MjhoMC4wN3YtMS42OTRjLTAuODM0LTAuNjQ5LTEuOTI1LTAuOTA0LTMuMTc4LTAuOTA0\r\nIiBzdHlsZT0iZmlsbDojMDQwNDA0Ii8+CiAgIDwvZz4KICA8L2c+CiA8L2c+Cjwvc3ZnPgo=\" alt=\"HPE\" />\r\n</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.3.1",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "default": false,
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 4,
+        "y": 0
+      },
+      "id": 23,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^serial$/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "ilo_system_info{host=\"$node\"}",
+          "format": "time_series",
+          "instant": true,
+          "legendFormat": "{{serial}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Serial Number",
+      "transformations": [
+        {
+          "id": "labelsToFields",
+          "options": {
+            "keepLabels": [
+              "sku",
+              "serial"
+            ],
+            "mode": "columns",
+            "valueLabel": "sku"
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 7,
+        "y": 0
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_current_watt{host='$node'}",
+          "interval": "",
+          "legendFormat": "{{sensor}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Power",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 11,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_current_watt{host='$node'} * 30 * 24 ",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Power usage 30d",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 15,
+        "y": 0
+      },
+      "id": 15,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "count(ilo_memory_dimm_healthy{host='$node'}) - count(ilo_memory_dimm_healthy{host='$node'} == 1)",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Unhealthy DIMMs",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 18,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "count(ilo_processor_healthy{host='$node'}) - count(ilo_processor_healthy{host='$node'} == 1)",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Unhealthy Processors",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 21,
+        "y": 0
+      },
+      "id": 19,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "count(ilo_storage_disk_healthy{host='$node'}) - count(ilo_storage_disk_healthy{host='$node'} == 1)",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Unhealthy Disks",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "red",
+                  "index": 1,
+                  "text": "Off"
+                },
+                "1": {
+                  "color": "green",
+                  "index": 0,
+                  "text": "On"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 4,
+        "y": 2
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_up{host='$node'}",
+          "interval": "",
+          "legendFormat": "{{sensor}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Power Status",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 15,
+        "y": 2
+      },
+      "id": 16,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "count(ilo_power_supply_enabled{host='$node'}) - count(ilo_power_supply_enabled{host='$node'} == 1)",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Disabled PSUs",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 3,
+        "x": 18,
+        "y": 2
+      },
+      "id": 17,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "count(ilo_power_supply_healthy{host='$node'}) - count(ilo_power_supply_healthy{host='$node'} == 1)",
+          "interval": "",
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Unhealthy PSUs",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 70
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 10,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false,
+        "sizing": "auto"
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_chassis_temperature_current{host='$node'}",
+          "interval": "",
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Temperatures",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "default": false,
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-blue",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 25
+              },
+              {
+                "color": "yellow",
+                "value": 40
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 60
+              },
+              {
+                "color": "semi-dark-red",
+                "value": 70
+              },
+              {
+                "color": "dark-red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 22,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_chassis_fan_current_percent{host=\"$node\", job=\"ilo\"}",
+          "interval": "",
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fans",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 22
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_chassis_fan_current_percent{host='$node'}",
+          "interval": "",
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Fans Speed (%)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 1,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 22
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_current_watt{host='$node'}",
+          "interval": "",
+          "legendFormat": "Current",
+          "range": true,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_average_watt{host='$node'}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Average",
+          "range": true,
+          "refId": "B"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_min_watt{host='$node'}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Min",
+          "range": true,
+          "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_power_max_watt{host='$node'}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "Max",
+          "range": true,
+          "refId": "D"
+        }
+      ],
+      "title": "Power (W)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "adivo5ceazzeoe"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "always",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 29
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      },
+      "pluginVersion": "11.3.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "adivo5ceazzeoe"
+          },
+          "editorMode": "code",
+          "expr": "ilo_chassis_temperature_current{host='$node'}",
+          "interval": "",
+          "legendFormat": "{{name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Temperatures",
+      "type": "timeseries"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 37
+      },
+      "id": 20,
+      "options": {
+        "alertInstanceLabelFilter": "{dashboard=\"iLO\"}",
+        "alertName": "",
+        "dashboardAlerts": false,
+        "groupBy": [],
+        "groupMode": "default",
+        "maxItems": 20,
+        "sortOrder": 1,
+        "stateFilter": {
+          "error": true,
+          "firing": true,
+          "noData": true,
+          "normal": false,
+          "pending": true
+        },
+        "viewMode": "list"
+      },
+      "pluginVersion": "11.3.1",
+      "title": "Alerts",
+      "type": "alertlist"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 40,
+  "tags": [
+    "prometheus",
+    "ilo-exporter"
+  ],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "10.111.15.17",
+          "value": "10.111.15.17"
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "adivo5ceazzeoe"
+        },
+        "definition": "label_values(ilo_manager_info,host)",
+        "includeAll": false,
+        "label": "HOST:",
+        "name": "node",
+        "options": [],
+        "query": {
+          "query": "label_values(ilo_manager_info,host)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "HP iLO",
+  "uid": "tUMY2B5Mk",
+  "version": 19,
+  "weekStart": ""
+}
